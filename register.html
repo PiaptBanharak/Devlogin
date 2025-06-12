@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+</head>
+<body class="bg min-h-screen flex items-center justify-center">
+    <div class="glass-effect p-8 rounded-lg shadow-lg w-96">
+        <div class="text-center mb-8">
+            <div class="logo-container">
+                <img src="./img/Devlogin.png" alt="Logo" class="mx-auto">
+            </div>
+            <p class="text-2xl font-bold text-center mb-6">Register</p>
+        </div>
+        
+        <form id="registerForm" class="space-y-6">
+            <div>
+                <label class="block text-sm font-medium text-gray-700"></label>
+                <input type="text" id="username" name="username" placeholder="Username" required 
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700"></label>
+                <input type="email" id="email" name="email" placeholder="Email" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700"></label>
+                <input type="password" id="password" name="password" placeholder="Password" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium text-gray-700"></label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <button type="submit"
+                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Register
+            </button>
+        </form>
+        <hr class="mt-10 mb-6 border-gray-300 w-full">
+
+            <div class="contact-us">
+                <p class="text-gray-600">Contact Us</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/mrton.banharak/"><img src="./img/icons-facebook.png" alt="Facebook" class="social-icon"></a>
+                <a href="https://www.instagram.com/tonbanharak/"><img src="./img/icons-ig.png" alt="Instagram" class="social-icon"></a>
+                <a href=""><img src="./img/icons-line.png" alt="Line" class="social-icon"></a>
+                <a href=""><img src="./img/icons-youtube.png" alt="YouTube" class="social-icon"></a>
+            </div>
+
+            <div class="website-link">
+                <a href="https://github.com/PiaptBanharak?tab=repositories/">https://github.com/PiaptBanharak</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/api.js"></script>
+</body>
+</html> 

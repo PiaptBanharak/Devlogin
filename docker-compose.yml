@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: myLogin
+    restart: always
+    environment:
+      POSTGRES_USER: login_admin
+      POSTGRES_PASSWORD: 2314
+      POSTGRES_DB: my_login
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  php:
+    image: php:8.0-apache
+    container_name: auth_php
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - PGSQL_HOST=db
+      - PGSQL_DATABASE=my_login
+      - PGSQL_USER=alogin_admin
+      - PGSQL_PASSWORD=2314
+
+volumes:
+  postgres_data: 
